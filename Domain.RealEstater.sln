@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Contract
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Matchers", "src\Domain.RealEstater.Matchers\Domain.RealEstater.Matchers.csproj", "{0BBE3555-B386-4546-BBBD-E0B3DF775339}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D442F4CC-DFB7-4D56-9E0D-398DBA024108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Tests", "src\Domain.RealEstater.Tests\Domain.RealEstater.Tests.csproj", "{B0E5DC55-8402-40E4-A0F4-E32F8527BCCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 		{0BBE3555-B386-4546-BBBD-E0B3DF775339}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BBE3555-B386-4546-BBBD-E0B3DF775339}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BBE3555-B386-4546-BBBD-E0B3DF775339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E5DC55-8402-40E4-A0F4-E32F8527BCCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E5DC55-8402-40E4-A0F4-E32F8527BCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E5DC55-8402-40E4-A0F4-E32F8527BCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E5DC55-8402-40E4-A0F4-E32F8527BCCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,5 +45,6 @@ Global
 		{C8E564CE-2787-4069-8D50-33FF3CEB7595} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
 		{358CC6BE-74A3-4325-8704-538EA33019B4} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
 		{0BBE3555-B386-4546-BBBD-E0B3DF775339} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
+		{B0E5DC55-8402-40E4-A0F4-E32F8527BCCC} = {D442F4CC-DFB7-4D56-9E0D-398DBA024108}
 	EndGlobalSection
 EndGlobal

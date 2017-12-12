@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.RealEstater.Contracts\Domain.RealEstater.Contracts.csproj">
+      <Project>{358CC6BE-74A3-4325-8704-538EA33019B4}</Project>
+      <Name>Domain.RealEstater.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

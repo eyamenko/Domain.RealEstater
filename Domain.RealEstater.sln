@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Models",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Contracts", "src\Domain.RealEstater.Contracts\Domain.RealEstater.Contracts.csproj", "{358CC6BE-74A3-4325-8704-538EA33019B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Matchers", "src\Domain.RealEstater.Matchers\Domain.RealEstater.Matchers.csproj", "{0BBE3555-B386-4546-BBBD-E0B3DF775339}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{358CC6BE-74A3-4325-8704-538EA33019B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{358CC6BE-74A3-4325-8704-538EA33019B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{358CC6BE-74A3-4325-8704-538EA33019B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BBE3555-B386-4546-BBBD-E0B3DF775339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BBE3555-B386-4546-BBBD-E0B3DF775339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BBE3555-B386-4546-BBBD-E0B3DF775339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BBE3555-B386-4546-BBBD-E0B3DF775339}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +36,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C8E564CE-2787-4069-8D50-33FF3CEB7595} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
 		{358CC6BE-74A3-4325-8704-538EA33019B4} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
+		{0BBE3555-B386-4546-BBBD-E0B3DF775339} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
 	EndGlobalSection
 EndGlobal

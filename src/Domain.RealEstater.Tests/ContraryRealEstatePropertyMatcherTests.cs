@@ -52,7 +52,7 @@ namespace Domain.RealEstater.Tests
             var databasePropety = new Property
             {
                 AgencyCode = "CRE",
-                Name = "The Summit Apartments",
+                Name = "Summit The Apartments",
                 Address = "31 Hereford Street, Glebe NSW",
                 Latitude = -33.8787075m,
                 Longitude = 151.1820893m

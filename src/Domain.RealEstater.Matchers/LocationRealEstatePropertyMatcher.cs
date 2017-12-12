@@ -1,4 +1,5 @@
 ﻿using Domain.RealEstater.Contracts;
+using Domain.RealEstater.Helpers;
 using Domain.RealEstater.Models;
 
 namespace Domain.RealEstater.Matchers
@@ -9,17 +10,11 @@ namespace Domain.RealEstater.Matchers
 
         public bool IsMatch(Property agencyProperty, Property databaseProperty)
         {
-            return agencyProperty.AgencyCode == databaseProperty.AgencyCode &&
-                   IsWithinThreshold(agencyProperty, databaseProperty);
-        }
+            var agencyCodeEquals = agencyProperty.AgencyCode == databaseProperty.AgencyCode;
+            var isWithinThreshold = Threshold.IsWithin(agencyProperty.Latitude, agencyProperty.Longitude,
+                databaseProperty.Latitude, databaseProperty.Longitude);
 
-        private static bool IsWithinThreshold(Property agencyProperty, Property databaseProperty)
-        {
-            return (agencyProperty.Latitude - databaseProperty.Latitude) *
-                   (agencyProperty.Latitude - databaseProperty.Latitude) +
-                   (agencyProperty.Longitude - databaseProperty.Longitude) *
-                   (agencyProperty.Longitude - databaseProperty.Longitude) <=
-                   Threshold * Threshold;
+            return agencyCodeEquals && isWithinThreshold;
         }
     }
 }

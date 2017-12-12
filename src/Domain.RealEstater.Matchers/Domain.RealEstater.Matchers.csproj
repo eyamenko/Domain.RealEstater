@@ -7,5 +7,6 @@
       <Project>{358CC6BE-74A3-4325-8704-538EA33019B4}</Project>
       <Name>Domain.RealEstater.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Domain.RealEstater.Helpers\Domain.RealEstater.Helpers.csproj" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿using Domain.RealEstater.Contracts;
+using Domain.RealEstater.Helpers;
 using Domain.RealEstater.Models;
 
 namespace Domain.RealEstater.Matchers
@@ -7,7 +8,7 @@ namespace Domain.RealEstater.Matchers
     {
         public bool IsMatch(Property agencyProperty, Property databaseProperty)
         {
-            throw new System.NotImplementedException();
+            return agencyProperty.Name.Backward() == databaseProperty.Name;
         }
     }
 }

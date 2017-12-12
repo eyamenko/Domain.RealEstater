@@ -7,8 +7,8 @@ namespace Domain.RealEstater.Web.Controllers
     [Route("api/[controller]")]
     public class AdvertisingController : Controller
     {
-        [HttpGet]
-        public IActionResult GetAll()
+        [HttpGet("properties")]
+        public IActionResult GetProperties()
         {
             var data = new List<Property>
             {
@@ -41,8 +41,8 @@ namespace Domain.RealEstater.Web.Controllers
             return Ok(data);
         }
 
-        [HttpPost]
-        public IActionResult Add([FromBody] Property property)
+        [HttpPost("properties")]
+        public IActionResult AddProperty([FromBody] Property property)
         {
             return Ok(property);
         }

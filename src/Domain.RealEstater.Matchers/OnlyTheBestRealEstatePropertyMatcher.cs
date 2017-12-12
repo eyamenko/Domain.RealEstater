@@ -8,12 +8,13 @@ namespace Domain.RealEstater.Matchers
     {
         public bool IsMatch(Property agencyProperty, Property databaseProperty)
         {
-            var aName = FilterString(agencyProperty.Name);
-            var dName = FilterString(databaseProperty.Name);
-            var aAddress = FilterString(agencyProperty.Address);
-            var dAddress = FilterString(databaseProperty.Address);
+            return StringEquals(agencyProperty.Name, databaseProperty.Name) &&
+                   StringEquals(agencyProperty.Address, databaseProperty.Address);
+        }
 
-            return aName == dName && aAddress == dAddress;
+        private static bool StringEquals(string str1, string str2)
+        {
+            return FilterString(str1) == FilterString(str2);
         }
 
         private static string FilterString(string str)

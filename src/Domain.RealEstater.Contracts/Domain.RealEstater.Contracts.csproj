@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.RealEstater.Models\Domain.RealEstater.Models.csproj">
+      <Project>{C8E564CE-2787-4069-8D50-33FF3CEB7595}</Project>
+      <Name>Domain.RealEstater.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

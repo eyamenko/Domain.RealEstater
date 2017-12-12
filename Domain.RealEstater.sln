@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Helpers", "src\Domain.RealEstater.Helpers\Domain.RealEstater.Helpers.csproj", "{6083C3E0-D859-4476-B080-8D3B1FA234A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Web", "src\Domain.RealEstater.Web\Domain.RealEstater.Web.csproj", "{DEADD531-3327-4686-9974-B45E5AE069E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{6083C3E0-D859-4476-B080-8D3B1FA234A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6083C3E0-D859-4476-B080-8D3B1FA234A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6083C3E0-D859-4476-B080-8D3B1FA234A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEADD531-3327-4686-9974-B45E5AE069E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEADD531-3327-4686-9974-B45E5AE069E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEADD531-3327-4686-9974-B45E5AE069E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEADD531-3327-4686-9974-B45E5AE069E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
-﻿using Domain.RealEstater.Contracts;
+﻿using System.Linq;
+using Domain.RealEstater.Contracts;
 using Domain.RealEstater.Models;
 
 namespace Domain.RealEstater.Matchers
@@ -7,7 +8,19 @@ namespace Domain.RealEstater.Matchers
     {
         public bool IsMatch(Property agencyProperty, Property databaseProperty)
         {
-            throw new System.NotImplementedException();
+            var aName = FilterString(agencyProperty.Name);
+            var dName = FilterString(databaseProperty.Name);
+            var aAddress = FilterString(agencyProperty.Address);
+            var dAddress = FilterString(databaseProperty.Address);
+
+            return aName == dName && aAddress == dAddress;
+        }
+
+        private static string FilterString(string str)
+        {
+            var chars = str.Replace('-', ' ').Where(ch => !char.IsPunctuation(ch));
+
+            return string.Concat(chars).ToLower();
         }
     }
 }

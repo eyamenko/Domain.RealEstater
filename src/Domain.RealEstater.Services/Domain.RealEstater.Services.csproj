@@ -3,6 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.RealEstater.Contracts\Domain.RealEstater.Contracts.csproj" />
     <ProjectReference Include="..\Domain.RealEstater.Models\Domain.RealEstater.Models.csproj" />
   </ItemGroup>
 </Project>

@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Helpers"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Web", "src\Domain.RealEstater.Web\Domain.RealEstater.Web.csproj", "{DEADD531-3327-4686-9974-B45E5AE069E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Services", "src\Domain.RealEstater.Services\Domain.RealEstater.Services.csproj", "{B1B2BF75-C2D7-4145-912C-D95DBB091CCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Data", "src\Domain.RealEstater.Data\Domain.RealEstater.Data.csproj", "{43802476-F981-4623-A725-67BEB8D18954}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{DEADD531-3327-4686-9974-B45E5AE069E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEADD531-3327-4686-9974-B45E5AE069E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEADD531-3327-4686-9974-B45E5AE069E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B2BF75-C2D7-4145-912C-D95DBB091CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B2BF75-C2D7-4145-912C-D95DBB091CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B2BF75-C2D7-4145-912C-D95DBB091CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B2BF75-C2D7-4145-912C-D95DBB091CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43802476-F981-4623-A725-67BEB8D18954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43802476-F981-4623-A725-67BEB8D18954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43802476-F981-4623-A725-67BEB8D18954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43802476-F981-4623-A725-67BEB8D18954}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +71,7 @@ Global
 		{0BBE3555-B386-4546-BBBD-E0B3DF775339} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
 		{B0E5DC55-8402-40E4-A0F4-E32F8527BCCC} = {D442F4CC-DFB7-4D56-9E0D-398DBA024108}
 		{6083C3E0-D859-4476-B080-8D3B1FA234A7} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
+		{B1B2BF75-C2D7-4145-912C-D95DBB091CCA} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
+		{43802476-F981-4623-A725-67BEB8D18954} = {2B8A0207-3D0D-4929-8996-31CB466AA916}
 	EndGlobalSection
 EndGlobal

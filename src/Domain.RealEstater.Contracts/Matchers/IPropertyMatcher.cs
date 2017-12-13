@@ -1,6 +1,6 @@
 ﻿using Domain.RealEstater.Models;
 
-namespace Domain.RealEstater.Contracts
+namespace Domain.RealEstater.Contracts.Matchers
 {
     public interface IPropertyMatcher
     {

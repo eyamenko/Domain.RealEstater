@@ -1,4 +1,5 @@
 ﻿using Domain.RealEstater.Contracts;
+using Domain.RealEstater.Contracts.Matchers;
 using Domain.RealEstater.Helpers;
 using Domain.RealEstater.Models;
 

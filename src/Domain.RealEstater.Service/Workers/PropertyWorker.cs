@@ -2,13 +2,12 @@
 using Domain.RealEstater.Models;
 using ServiceNetCore;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Domain.RealEstater.Service.Workers
 {
     public class PropertyWorker : Worker
     {
-        private const int OneSecond = 1000;
+        private const int RunEvery = 2000;
 
         private readonly IQueueService<Property> _queueService;
         private readonly IPropertyService _propertyService;
@@ -23,8 +22,8 @@ namespace Domain.RealEstater.Service.Workers
 
         public override void Start()
         {
-            _timer = new Timer(_ => Callback().Wait());
-            _timer.Change(OneSecond, OneSecond);
+            _timer = new Timer(Callback);
+            _timer.Change(RunEvery, RunEvery);
         }
 
         public override void Stop()
@@ -32,7 +31,7 @@ namespace Domain.RealEstater.Service.Workers
             _timer.Dispose();
         }
 
-        private async Task Callback()
+        private async void Callback(object state)
         {
             var property = await _queueService.Peek();
 

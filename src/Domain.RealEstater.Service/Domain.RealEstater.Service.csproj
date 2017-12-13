@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ServiceNetCore" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.RealEstater.Contracts\Domain.RealEstater.Contracts.csproj" />
+    <ProjectReference Include="..\Domain.RealEstater.Data\Domain.RealEstater.Data.csproj" />
+    <ProjectReference Include="..\Domain.RealEstater.Matchers\Domain.RealEstater.Matchers.csproj" />
+    <ProjectReference Include="..\Domain.RealEstater.Models\Domain.RealEstater.Models.csproj" />
+    <ProjectReference Include="..\Domain.RealEstater.Services\Domain.RealEstater.Services.csproj" />
+  </ItemGroup>
+</Project>

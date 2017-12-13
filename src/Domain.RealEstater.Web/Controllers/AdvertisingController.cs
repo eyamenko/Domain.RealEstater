@@ -11,44 +11,27 @@ namespace Domain.RealEstater.Web.Controllers
     public class AdvertisingController : Controller
     {
         private readonly IQueueService<Property> _queueService;
+        private readonly IPropertyService _propertyService;
 
-        public AdvertisingController(IQueueService<Property> queueService)
+        public AdvertisingController(IQueueService<Property> queueService, IPropertyService propertyService)
         {
             _queueService = queueService;
+            _propertyService = propertyService;
         }
 
         [HttpGet("properties")]
-        public IActionResult GetProperties()
+        public async Task<IActionResult> GetProperties()
         {
-            var data = new List<Property>
+            try
             {
-                new Property
-                {
-                    AgencyCode = "LRE",
-                    Name = "Luxurious Apartments",
-                    Address = "4 McDonald Street, Potts Point NSW",
-                    Latitude = -33.8677394m,
-                    Longitude = 151.2229558m
-                },
-                new Property
-                {
-                    AgencyCode = "OTBRE",
-                    Name = "Super High Apartments, Sydney",
-                    Address = "32 Sir John Young Crescent, Sydney NSW",
-                    Latitude = -33.8707617m,
-                    Longitude = 151.2151041m
-                },
-                new Property
-                {
-                    AgencyCode = "CRE",
-                    Name = "The Summit Apartments",
-                    Address = "31 Hereford Street, Glebe NSW",
-                    Latitude = -33.8787075m,
-                    Longitude = 151.1820893m
-                }
-            };
+                var properties = await _propertyService.GetAllAdvertised();
 
-            return Ok(data);
+                return Ok(properties);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPost("properties")]

@@ -1,6 +1,8 @@
 ﻿using Domain.RealEstater.Contracts.Data;
+using Domain.RealEstater.Contracts.Matchers;
 using Domain.RealEstater.Contracts.Services;
 using Domain.RealEstater.Data;
+using Domain.RealEstater.Matchers;
 using Domain.RealEstater.Models;
 using Domain.RealEstater.Services;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +25,7 @@ namespace Domain.RealEstater.Service
             #region Services
 
             services.AddSingleton<IQueueService<Property>, PropertyQueueService>();
+            services.AddSingleton<IPropertyService, PropertyService>();
 
             #endregion
 
@@ -32,6 +35,15 @@ namespace Domain.RealEstater.Service
                 new MySqlConnectionFactory(_configuration.GetConnectionString("RealEstater")));
 
             services.AddSingleton<IQueueRepository, QueueRepository>();
+
+            #endregion
+
+            #region Property Matchers
+
+            services.AddSingleton<IMatcherFactory, MatcherFactory>();
+            services.AddSingleton<IPropertyMatcher, ContraryRealEstatePropertyMatcher>();
+            services.AddSingleton<IPropertyMatcher, LocationRealEstatePropertyMatcher>();
+            services.AddSingleton<IPropertyMatcher, OnlyTheBestRealEstatePropertyMatcher>();
 
             #endregion
         }

@@ -9,6 +9,8 @@ namespace Domain.RealEstater.Matchers
     {
         private const decimal Threshold = 1m / 111 / 1000 * 200;
 
+        public string AgencyCode => "LRE";
+
         public bool IsMatch(Property agencyProperty, Property databaseProperty)
         {
             var agencyCodeEquals = agencyProperty.AgencyCode == databaseProperty.AgencyCode;

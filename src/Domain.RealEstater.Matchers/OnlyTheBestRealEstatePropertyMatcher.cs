@@ -7,6 +7,8 @@ namespace Domain.RealEstater.Matchers
 {
     public class OnlyTheBestRealEstatePropertyMatcher : IPropertyMatcher
     {
+        public string AgencyCode => "OTBRE";
+
         public bool IsMatch(Property agencyProperty, Property databaseProperty)
         {
             var nameEquals = agencyProperty.Name.EqualsWithoutPunctuation(databaseProperty.Name);

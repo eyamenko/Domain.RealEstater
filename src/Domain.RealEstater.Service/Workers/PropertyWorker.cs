@@ -11,12 +11,14 @@ namespace Domain.RealEstater.Service.Workers
         private const int OneSecond = 1000;
 
         private readonly IQueueService<Property> _queueService;
+        private readonly IPropertyService _propertyService;
 
         private Timer _timer;
 
-        public PropertyWorker(IQueueService<Property> queueService)
+        public PropertyWorker(IQueueService<Property> queueService, IPropertyService propertyService)
         {
             _queueService = queueService;
+            _propertyService = propertyService;
         }
 
         public override void Start()
@@ -38,6 +40,8 @@ namespace Domain.RealEstater.Service.Workers
             {
                 return;
             }
+
+            await _propertyService.Match(property);
         }
     }
 }

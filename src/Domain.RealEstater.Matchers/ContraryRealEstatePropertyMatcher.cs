@@ -7,6 +7,8 @@ namespace Domain.RealEstater.Matchers
 {
     public class ContraryRealEstatePropertyMatcher : IPropertyMatcher
     {
+        public string AgencyCode => "CRE";
+
         public bool IsMatch(Property agencyProperty, Property databaseProperty)
         {
             return agencyProperty.Name.Backward() == databaseProperty.Name;

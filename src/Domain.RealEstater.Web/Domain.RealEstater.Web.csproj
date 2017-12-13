@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain.RealEstater.Contracts\Domain.RealEstater.Contracts.csproj" />
     <ProjectReference Include="..\Domain.RealEstater.Data\Domain.RealEstater.Data.csproj" />
+    <ProjectReference Include="..\Domain.RealEstater.Matchers\Domain.RealEstater.Matchers.csproj" />
     <ProjectReference Include="..\Domain.RealEstater.Models\Domain.RealEstater.Models.csproj" />
     <ProjectReference Include="..\Domain.RealEstater.Services\Domain.RealEstater.Services.csproj" />
   </ItemGroup>

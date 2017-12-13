@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using Domain.RealEstater.Contracts.Data;
 using MySql.Data.MySqlClient;
 

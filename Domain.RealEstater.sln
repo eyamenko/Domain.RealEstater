@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Services
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Data", "src\Domain.RealEstater.Data\Domain.RealEstater.Data.csproj", "{43802476-F981-4623-A725-67BEB8D18954}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.RealEstater.Service", "src\Domain.RealEstater.Service\Domain.RealEstater.Service.csproj", "{5358B1A0-F4A9-4011-88B8-7D079F00332A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{43802476-F981-4623-A725-67BEB8D18954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43802476-F981-4623-A725-67BEB8D18954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43802476-F981-4623-A725-67BEB8D18954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5358B1A0-F4A9-4011-88B8-7D079F00332A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5358B1A0-F4A9-4011-88B8-7D079F00332A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5358B1A0-F4A9-4011-88B8-7D079F00332A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5358B1A0-F4A9-4011-88B8-7D079F00332A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

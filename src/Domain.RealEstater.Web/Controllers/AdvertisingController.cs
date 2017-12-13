@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Domain.RealEstater.Contracts.Services;
 using Domain.RealEstater.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +10,13 @@ namespace Domain.RealEstater.Web.Controllers
     [Route("api/[controller]")]
     public class AdvertisingController : Controller
     {
+        private readonly IQueueService<Property> _queueService;
+
+        public AdvertisingController(IQueueService<Property> queueService)
+        {
+            _queueService = queueService;
+        }
+
         [HttpGet("properties")]
         public IActionResult GetProperties()
         {
@@ -42,9 +52,18 @@ namespace Domain.RealEstater.Web.Controllers
         }
 
         [HttpPost("properties")]
-        public IActionResult AddProperty([FromBody] Property property)
+        public async Task<IActionResult> AddProperty([FromBody] Property property)
         {
-            return Ok(property);
+            try
+            {
+                await _queueService.Push(property);
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
     }
 }

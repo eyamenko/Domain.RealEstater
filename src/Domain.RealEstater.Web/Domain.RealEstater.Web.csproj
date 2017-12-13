@@ -12,7 +12,10 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.RealEstater.Contracts\Domain.RealEstater.Contracts.csproj" />
+    <ProjectReference Include="..\Domain.RealEstater.Data\Domain.RealEstater.Data.csproj" />
     <ProjectReference Include="..\Domain.RealEstater.Models\Domain.RealEstater.Models.csproj" />
+    <ProjectReference Include="..\Domain.RealEstater.Services\Domain.RealEstater.Services.csproj" />
   </ItemGroup>
   <Target Name="PublishClient" AfterTargets="ComputeFilesToPublish">
     <Exec Command="npm install" />

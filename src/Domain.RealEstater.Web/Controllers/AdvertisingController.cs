@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.RealEstater.Contracts.Services;
 using Domain.RealEstater.Models;
@@ -10,8 +9,8 @@ namespace Domain.RealEstater.Web.Controllers
     [Route("api/[controller]")]
     public class AdvertisingController : Controller
     {
-        private readonly IQueueService<Property> _queueService;
         private readonly IPropertyService _propertyService;
+        private readonly IQueueService<Property> _queueService;
 
         public AdvertisingController(IQueueService<Property> queueService, IPropertyService propertyService)
         {

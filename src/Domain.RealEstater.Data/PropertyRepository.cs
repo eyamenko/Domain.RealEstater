@@ -8,7 +8,7 @@ namespace Domain.RealEstater.Data
 {
     public class PropertyRepository : IPropertyRepository
     {
-        private const string Table = "properties";
+        private const string PROPERTIES = "properties";
 
         private readonly IConnectionFactory _connectionFactory;
 
@@ -22,7 +22,7 @@ namespace Domain.RealEstater.Data
             var sql = $@"SELECT
                              *
                          FROM
-                             {Table}
+                             {PROPERTIES}
                          WHERE
                              Advertised = 0";
 
@@ -37,7 +37,7 @@ namespace Domain.RealEstater.Data
             var sql = $@"SELECT
                              *
                          FROM
-                             {Table}
+                             {PROPERTIES}
                          WHERE
                              Advertised = 1";
 
@@ -50,7 +50,7 @@ namespace Domain.RealEstater.Data
         public async Task SetAdvertised(Property property)
         {
             var sql = $@"UPDATE
-                             {Table}
+                             {PROPERTIES}
                          SET
                              Advertised = 1
                          WHERE

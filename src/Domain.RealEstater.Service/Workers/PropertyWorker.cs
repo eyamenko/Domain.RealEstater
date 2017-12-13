@@ -1,16 +1,16 @@
-﻿using Domain.RealEstater.Contracts.Services;
+﻿using System.Threading;
+using Domain.RealEstater.Contracts.Services;
 using Domain.RealEstater.Models;
 using ServiceNetCore;
-using System.Threading;
 
 namespace Domain.RealEstater.Service.Workers
 {
     public class PropertyWorker : Worker
     {
-        private const int RunEvery = 2000;
+        private const int RUN_EVERY = 2000;
 
-        private readonly IQueueService<Property> _queueService;
         private readonly IPropertyService _propertyService;
+        private readonly IQueueService<Property> _queueService;
 
         private Timer _timer;
 
@@ -23,7 +23,7 @@ namespace Domain.RealEstater.Service.Workers
         public override void Start()
         {
             _timer = new Timer(Callback);
-            _timer.Change(RunEvery, RunEvery);
+            _timer.Change(0, RUN_EVERY);
         }
 
         public override void Stop()

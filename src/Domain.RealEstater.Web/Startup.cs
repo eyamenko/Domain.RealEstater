@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Domain.RealEstater.Contracts.Data;
+﻿using Domain.RealEstater.Contracts.Data;
 using Domain.RealEstater.Contracts.Matchers;
 using Domain.RealEstater.Contracts.Services;
 using Domain.RealEstater.Data;
@@ -11,7 +7,6 @@ using Domain.RealEstater.Models;
 using Domain.RealEstater.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
@@ -85,12 +80,12 @@ namespace Domain.RealEstater.Web
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    "default",
+                    "{controller=Home}/{action=Index}/{id?}");
 
                 routes.MapSpaFallbackRoute(
-                    name: "spa-fallback",
-                    defaults: new {controller = "Home", action = "Index"});
+                    "spa-fallback",
+                    new {controller = "Home", action = "Index"});
             });
         }
     }

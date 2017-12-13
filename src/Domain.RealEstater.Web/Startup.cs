@@ -52,6 +52,7 @@ namespace Domain.RealEstater.Web
                 new MySqlConnectionFactory(_configuration.GetConnectionString("RealEstater")));
 
             services.AddSingleton<IQueueRepository, QueueRepository>();
+            services.AddSingleton<IPropertyRepository, PropertyRepository>();
 
             #endregion
 

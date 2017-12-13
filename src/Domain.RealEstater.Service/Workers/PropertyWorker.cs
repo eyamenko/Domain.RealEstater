@@ -23,7 +23,7 @@ namespace Domain.RealEstater.Service.Workers
 
         public override void Start()
         {
-            _timer = new Timer(_ => Callback().GetAwaiter().GetResult());
+            _timer = new Timer(_ => Callback().Wait());
             _timer.Change(OneSecond, OneSecond);
         }
 

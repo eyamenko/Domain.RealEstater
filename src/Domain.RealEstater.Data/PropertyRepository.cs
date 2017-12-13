@@ -6,7 +6,7 @@ using Domain.RealEstater.Models;
 
 namespace Domain.RealEstater.Data
 {
-    public class PropertyRepository
+    public class PropertyRepository : IPropertyRepository
     {
         private const string Table = "properties";
 

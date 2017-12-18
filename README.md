@@ -31,3 +31,8 @@ Property Worker is the main component that dequeues messages every 2 seconds and
 #### Web client
 
 Web client displays all advertised properties.
+
+#### Prerequisites
+
+* Node.js >= 8.0.0
+* .NET Core SDK >= 2.0.0

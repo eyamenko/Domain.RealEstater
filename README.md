@@ -1,13 +1,13 @@
-### Domain.RealEstater
+## Domain.RealEstater
 
-#### Description
+### Description
 
 This application consists of three parts: an API, a web client and a service.
 
 In real life it can take a while to match properties, therefore we need to use asynchronous processing.
 This application has a silly queue system that serves this purpose.
 
-#### API
+### API
 
 Here is a sample API request:
 
@@ -24,15 +24,15 @@ Here is a sample API request:
 </Property>
 ```
 
-#### Service
+### Service
 
 Property Worker is the main component that dequeues messages every 2 seconds and performs correspondent matching logic.
 
-#### Web client
+### Web client
 
 Web client displays all advertised properties.
 
-#### Prerequisites
+### Prerequisites
 
 * Node.js >= 8.0.0
 * .NET Core SDK >= 2.0.0
